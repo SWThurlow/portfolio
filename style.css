@@ -1,0 +1,219 @@
+/*Classes used consistently*/
+
+:root {
+    --contentWidth: 80vw
+}
+
+
+/*h1 to h6 tags and li used in the navigation bar*/
+
+.hTag {
+    font-family: 'Source Serif Pro', serif;
+    background-color: #404040;
+}
+
+
+/*For all h1 tags throughout site*/
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    width: 100vw;
+    padding: 10px 0;
+    margin: 0 auto;
+    line-height: 48px;
+    color: #ffff66;
+}
+
+
+/*h2 tags used for section titles on landing page*/
+
+h2 {
+    width: var(--contentWidth);
+    font-size: 28px;
+    padding: 10px;
+    margin: 30px auto;
+    color: #f02ebf;
+}
+
+
+/*All text content that doesn't fall under hTag*/
+
+.textContent {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+
+/*Main content held in section tags*/
+
+section,
+.section {
+    width: var(--contentWidth);
+    margin: 0 auto;
+}
+
+
+/*Navigation bar*/
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: calc(100vw - 1vw);
+    height: 8vh;
+    background-color: #fff;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+}
+
+nav ul li {
+    padding: calc((8vh - 16px)/2) 15px;
+}
+
+
+/*Landing page sections grid*/
+
+body {
+    display: grid;
+    grid-template-rows: unset unset unset unset;
+    grid-template-areas: "header" "about" "projects" "contact";
+    overflow-x: hidden;
+}
+
+
+/*Header*/
+
+
+/*Header Elements*/
+
+header {
+    height: 92vh;
+    width: 100vw;
+    margin-top: 8vh;
+    margin-bottom: 50px;
+    background-color: #404040;
+    grid-area: header;
+    z-index: 50;
+}
+
+header .titleContainer {
+    height: 100vh;
+    width: calc(100vw - 1vw);
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header h1 {
+    width: calc(100vw - 10px);
+}
+
+
+/*About me section*/
+
+#about {
+    grid-area: about;
+    z-index: 50;
+}
+
+#about figure {
+    width: 200px;
+    padding: 0 20px;
+    float: right;
+}
+
+#about figure img {
+    width: 200px;
+}
+
+#about figure p {
+    width: fit-content;
+}
+
+#about p {
+    width: calc(75vw - 300px);
+    display: inline-block;
+}
+
+
+/*Projects section*/
+
+#projects {
+    margin-top: 20px;
+    grid-area: projects;
+    z-index: 50;
+}
+
+#projects p {
+    width: calc(75vw - 300px);
+}
+
+.projectGallery {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 100px calc((75vw - 200px)/3) calc((75vw - 200px)/3) calc((75vw - 200px)/3) 100px;
+}
+
+#projects div p {
+    width: inherit;
+}
+
+#projects #leftArrow {
+    height: 300px;
+    width: 100px;
+    background-image: url('imgs/arrow.png');
+}
+
+#projects #rightArrow {
+    height: 300px;
+    width: 100px;
+    float: right;
+    background-color: blueviolet;
+}
+
+
+/*Contact form*/
+
+#contactForm {
+    grid-area: contact;
+    grid-template-rows: unset unset unset unset;
+    grid-template-areas: "email" "subject" "message" "submit";
+}
+
+#contactForm form {
+    display: grid;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#contactForm .emailField {
+    grid-area: email;
+}
+
+#contactForm .subjectField {
+    grid-area: subject;
+}
+
+#contactForm .messageField {
+    grid-area: message;
+}
+
+#contactForm .submitBtn {
+    grid-area: submit;
+}
+
+
+/*Footer*/
+
+footer {
+    background-color: #404040;
+    height: 20vh;
+    margin-top: 3vh;
+}
