@@ -75,7 +75,7 @@ section,
     top: 0;
     left: 0;
     right: 0;
-    width: calc(100vw - 1vw);
+    width: 100vw;
     height: 8vh;
     background-color: #fff;
     z-index: 100;
@@ -191,12 +191,16 @@ header .titleContainer {
 
 #contactForm {
     grid-area: contact;
-    grid-template-rows: unset unset unset unset;
-    grid-template-areas: "email" "subject" "message" "submit";
+}
+
+#contactForm p {
+    margin-bottom: 25px;
 }
 
 #contactForm form {
     display: grid;
+    grid-template-rows: unset unset unset unset;
+    grid-template-areas: "email" "subject" "message" "submit";
     width: 50%;
     margin: 0 auto;
 }
