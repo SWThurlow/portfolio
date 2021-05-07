@@ -1,0 +1,53 @@
+html {
+    background-color: #0000009d;
+}
+
+body{
+    text-align: center;
+}
+
+h1{
+    height: 50px;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+    line-height: 50px;
+    background-color: #242424;
+    color: #f39a24;
+}
+
+h2{
+    height: 50px;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+    line-height: 50px;
+    background-color: #242424;
+    color: #f39a24;
+}
+
+h3{
+    height: 50px;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+    line-height: 50px;
+    background-color: #f39a24;
+    color: #0c0a0a;
+}
+
+.playLog {
+    padding: 5px 0px;
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 5px;
+    background-color: #f39a24;
+    color: #0c0a0a;
+}
+
+button {
+    background-color: #f39a24;
+    color: #0c0a0a;
+    border: 1px solid black;
+    border-radius: 15%;
+}
