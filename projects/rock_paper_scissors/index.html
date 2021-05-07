@@ -3,20 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="../../resetstyle.css">
+        <link rel="stylesheet" href="../../style.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Rock, Paper, Scissors</h1>
-        <h2>Best of five</h2>
-        <button class="start">Start Game</button>
-        <h3 class="runningComentary"></h3>
-        <section class="selection">
-            <button id="rock" class="playerOption">Rock</button>
-            <button id="paper" class="playerOption">Paper</button>
-            <button id="scissors" class="playerOption">Scissors</button>
-        </section>
-        <section class="playLog">
-        </section>
+        <nav class="navBar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 class="hTag">Rock, Paper, Scissors</h1>
+        </header>
+        <main>
+            <section class="gameArea">
+                <h2 class="hTag">Best of five</h2>
+                <button class="start textContent">Start Game</button>
+                <h3 class="runningComentary hTag">Lets play!</h3>
+                <section class="selection">
+                    <button id="rock" class="playerOption textContent">Rock</button>
+                    <button id="paper" class="playerOption textContent">Paper</button>
+                    <button id="scissors" class="playerOption textContent">Scissors</button>
+                </section>
+                <section class="playLog textContent"></section>
+            </section>
+        </main>
     </body>
     <script src="script.js"></script>
 </html>
