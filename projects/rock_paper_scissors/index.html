@@ -5,7 +5,9 @@
         <title>Rock Paper Scissors</title>
         <link rel="stylesheet" href="../../resetstyle.css">
         <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../projects.css">
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
         <nav class="navBar">
@@ -31,14 +33,20 @@
                 </section>
                 <section class="playLog textContent"></section>
             </section>
+            <section class="aboutProject">
             <h2 class="hTag">About this project</h2>
             <h3 class="hTag">Where I started</h3>
             <p class="textContent">This project started off as a simple game using prompts and displaying outcomes in the console. While this allowed the making of the game to be not too difficult to start with having prompts pop up and having to view outcomes in the console is far from a user friendly game to play. </p>
             <h3 class="hTag">How it changed</h3>
-            <p class="textContent">That lead to my making a fairly basic interface to play the game through, which if I start exploring making digital art work I may make something so that there can be images for each of the actions to make the interface slightly less spartan. The javascript interaction with the interface lead to some more challenging problems with the code such as the game log being able to reach slightly outragous lengths due to my not incorporrating a way to reset the game at first, and my then having to read into removing all of a nodes child elements once I added a button to reset the game. </p>
+            <p class="textContent">While I had made a working game it's impractical display led to my choosing to make a basic interface to play the game through. Which if I start exploring making digital art work I may make something so that there can be images for each of the actions to make the interface slightly less spartan.</p>
+            <p class="textContent"> 
+                The javascript interaction with the interface lead to some more challenging problems with the code such as the game log being able to reach slightly outrageous lengths due to my not incorporating a way to reset the game at first. </p>
             <h3 class="hTag">How I improved</h3>
-            <p class="textContent">It was pointed out to me that I didn’t need to have as many global variables as I was using at first which led to my learning more aboutand implementing arguments being parsed into functions to prevent unnecessay global variables.</p>
+            <p class="textContent">The game log's needing resetting meant I had to brush up on some DOM manipulation, specifically removing child nodes. I then found it easier to iterate through the node list returned from playLog.childNodes after turning into an array.</p>
+            <p class="textContent">was pointed out to me that I didn’t need to have as many global variables as I was using at first which led to my looking at how many arguments could be parsed into functions to prevent unnecessary global variables.</p>
+            </section>
         </main>
+        <footer></footer>
     </body>
     <script src="script.js"></script>
 </html>

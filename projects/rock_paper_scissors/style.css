@@ -1,21 +1,10 @@
-/*Getting the header to a better height than the one set in ../../style.css*/
-header {
-    height: 50px;
-    line-height: 50px;
-}
-
-
 /*Aligning text to the center for the game.*/
-main {
-    text-align: center;
-}
-
-
 .gameArea {
     width: 50vw;
     margin: 0 auto;
     background-color: #ff9100;
     border-radius: 5px;
+    text-align: center;
 }
 
 /*Styles for the h tags in the game area.*/
