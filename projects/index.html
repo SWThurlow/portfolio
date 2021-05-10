@@ -11,7 +11,7 @@
     <body>
         <nav class="navBar">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contactForm">Contact</a></li>
@@ -20,8 +20,71 @@
         <header>
             <h1>Projects</h1>
         </header>
-        <section>
-            <h2 class="hTag">Recent Additions</h>
-        </section>
+        <main>
+            <h2 class="hTag">Recent Additions</h2>
+            <p class="textContent">The ten things I've been working on lately.</p>
+            <div class="latestGallery">
+                <div class="leftLean latest1">
+                    <h3 class="hTag latest5header">Five</h3>
+                </div>
+                <div class="rightLean latest2">
+                    <h3 class="hTag latest2header">Two</h3>
+                </div>
+                <div class="leftLean latest3">
+                    <h3 class="hTag latest3header">Three</h3>
+                </div>
+                <div class="rightLean latest4">
+                    <h3 class="hTag latest4header">Four</h3>
+                </div>
+                <div class="leftLean latest5">
+                    <h3 class="hTag latest5header">Five</h3>
+                </div>
+                <div class="rightLean latest2">
+                    <h3 class="hTag latest2header">Two</h3>
+                </div>
+                <div class="leftLean latest3">
+                    <h3 class="hTag latest3header">Three</h3>
+                </div>
+                <div class="rightLean latest4">
+                    <h3 class="hTag latest4header">Four</h3>
+                </div>
+                <div class="leftLean latest5">
+                    <h3 class="hTag latest5header">Five</h3>
+                </div>
+            </div><!--
+            <h2 class="hTag">My Favourite Three</h2>
+            <p class="textContent">My three favourite projects.</p>-->
+            <footer></footer>
+        </main>
     </body>
+    <script>
+        //For scrolling on latest projects gallery.
+
+        const galleryScroll = document.querySelector('.latestGallery');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        galleryScroll.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX - galleryScroll.offsetLeft;
+            scrollLeft = galleryScroll.scrollLeft;
+        });
+
+        galleryScroll.addEventListener('mouseleave', (e) => {
+            isDown = false;
+        });
+
+        galleryScroll.addEventListener('mouseup', (e) => {
+            isDown = false;
+        });
+
+        galleryScroll.addEventListener('mousemove', (e) => {
+            if(!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - galleryScroll.offsetLeft;
+            const walk = (x - startX) * 2;
+            galleryScroll.scrollLeft = scrollLeft- walk;
+        });
+    </script>
 </html>
