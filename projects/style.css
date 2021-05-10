@@ -5,6 +5,8 @@ header {
 /*Latest Projects*/
 
 .latestGallery {
+    display: flex;
+    flex-wrap: nowrap;
     height: 600px;
     padding: 50px 100px;
     border: 1px solid white;
@@ -41,6 +43,30 @@ header {
    transform: scaleX(1.31) rotateY(-40deg); 
 }
 
+.latestGallery div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .latestGallery div h3 {
-    margin: 0;
+    margin: 0 auto 10px auto;
+    text-align: center;
+}
+
+.latestGallery div img {
+    width: fit-content;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.latestGallery div p{
+    color: #000;
+    padding: 12px;
+    margin: 0 auto;
+    white-space: normal;
+}
+
+.latest1 h3 {
+    height: 80px
 }
