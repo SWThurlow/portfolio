@@ -11,8 +11,7 @@ header {
     padding: 50px 100px;
     border: 1px solid white;
     overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
+    overflow-y: hidden;     
     user-select: none;
     cursor: pointer;
     transition: all 0.2s;
@@ -29,9 +28,6 @@ header {
     padding-top: 10px;
     display: inline-flex;
     justify-content: center;
-    font-size: 80px;
-    font-weight: 100;
-    color: rgba(0,0,0,0.15);
     box-shadow: inset 0 0 0 10px rgba(0, 0, 0, 0.473);
 }
 
@@ -65,6 +61,10 @@ header {
     padding: 12px;
     margin: 0 auto;
     white-space: normal;
+}
+
+.latestGallery div .galleryLink{
+    padding: 0;
 }
 
 .latest1 h3 {
