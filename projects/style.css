@@ -48,6 +48,7 @@ header {
 .latestGallery div h3 {
     margin: 0 auto 10px auto;
     text-align: center;
+    height: fit-content;
 }
 
 .latestGallery div img {
@@ -65,8 +66,4 @@ header {
 
 .latestGallery div .galleryLink{
     padding: 0;
-}
-
-.longHeader {
-    height: 80px
 }
