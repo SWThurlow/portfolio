@@ -1,0 +1,129 @@
+h1{
+    height: 100px;
+    font-size: 40px;
+    font-weight: 530;
+    line-height: 100px;
+    text-align: center;
+    color: rgb(239, 255, 13);
+    background-color: rgba(20, 14, 14, 0.671);
+}
+
+main{
+    width: 90vw;
+    padding-bottom: 50px;
+    margin: 20px auto;
+}
+
+.gridContainer {
+    display: grid;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.gridCell {
+    border: 1px solid black;
+}
+
+h2 {
+    width: 500px;
+    height: 50px;
+    margin: 15px auto 0 auto;
+    line-height: 50px;
+    font-size: 28px;
+    font-weight: 540;
+    color: rgb(0, 153, 255);
+    background-color: rgba(20, 14, 14, 0.671);
+    text-align: center;
+}
+
+form {
+    padding: 10px;
+    margin: 20px auto 0 auto;
+    width: 260px;
+    border: 2px solid rgba(20, 14, 14, 0.671);
+    border-radius: 3px;
+}
+
+form h3{
+    margin: 10px 0;
+    height: 32px;
+    line-height: 32px;
+    font-size: 20px;
+    font-weight: 540;
+    color: rgb(0, 255, 128);
+    background-color: rgba(20, 14, 14, 0.671);
+    text-align: center;
+}
+
+.gridSize{
+    width: 240px;
+    display: grid;
+    grid-template-columns: 70px 50px 135px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.colourSelect { 
+    display: grid;
+    grid-template-areas: "scale" "rainbow" "picker";
+}
+
+.colourSelect #greyScale {
+    grid-area: scale;
+    margin: 0 auto;
+    background-color: rgb(214, 212, 86);
+    color: rgb(36, 35, 35);
+    
+}
+
+.colourSelect #rainbow {
+    grid-area: rainbow;
+    margin: 5px auto 0 auto;
+    background-color: rgba(189, 28, 167, 0.658);
+}
+
+.colourSelect .picker{
+    grid-area: picker;
+    margin: 5px auto 0 auto;
+}
+
+.colourSelect button{
+    height: 30px;
+    width: 82px;
+    border: none;
+    border-radius: 3px;
+}
+
+.picker {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 110px 50px;
+    align-items: center;
+}
+
+.eraser {
+    display: grid;
+}
+
+.eraser #clearGrid { 
+    margin: 5px auto 0 auto; 
+    height: 30px;
+    width: 115px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(20, 14, 14, 0.671);
+    color: rgb(250, 123, 208);
+}
+
+.eraser #eraser { 
+    margin: 0 auto;
+    height: 30px;
+    width: 115px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(20, 14, 14, 0.671);
+    color: rgb(255, 123, 46);
+}
