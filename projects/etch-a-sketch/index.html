@@ -11,11 +11,21 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 class="hTag">Etch-A-Sketch</h1>
+        <nav class="navBar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="../index.html">Projects</a></li>
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1 class="hTag">Etch-A-Sketch</h1>
+        </header>
         <main>
             <div class="gridContainer"></div>
-            <h2 class="hTag">Change it up!</h2>
-            <section>
+            <h2 class="hTag drawingOptionsHeader">Change it up!</h2>
+            <section class="drawingOptions">
                 <h3 class="hTag">Number of grid cells</h3>
                 <div class="gridSize">
                     <label for="gridSize">Grid Size:</label><p></p><input type="range" min="16" max="64" step="1" name="gridSize" id="gridSize" value="32">
@@ -40,7 +50,17 @@
                     <button  class="drawOnMouseover" data-click="draw-on-mouseover">Big brush strokes</button>
                 </div>
             </section>
+            <section class="aboutProject">
+                <h2 class="hTag">About this project</h2>
+                <h3 class="hTag">Where I started</h3>
+                <p class="textContent"></p>
+                <h3 class="hTag">How it changed</h3>
+                <p class="textContent"></p>
+                <h3 class="hTag">How I improved</h3>
+                <p class="textContent"></p>
+                </section>
         </main>
+        <footer></footer>
     </body>
     <script src="script.js"></script>
 </HTML>

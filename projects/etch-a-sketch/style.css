@@ -10,13 +10,13 @@
     border: 1px solid black;
 }
 
-h2 {
+.drawingOptionsHeader {
     width: 500px;
     margin: 15px auto 0 auto;
     text-align: center;
 }
 
-section {
+.drawingOptions {
     padding: 10px;
     margin: 20px auto 0 auto;
     width: 260px;
@@ -24,15 +24,9 @@ section {
     border-radius: 3px;
 }
 
-section h3{
+.drawingOptions h3{
     width: 100%;
     margin: 10px 0;
-    /*height: 32px;
-    line-height: 32px;
-    font-size: 20px;
-    font-weight: 540;
-    color: rgb(0, 255, 128);
-    background-color: rgba(20, 14, 14, 0.671);*/
     text-align: center;
 }
 

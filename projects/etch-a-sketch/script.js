@@ -2,8 +2,8 @@
  const container = document.querySelector('.gridContainer');
  const gridSize = document.getElementById('gridSize');
  const colourPicker = document.getElementById('picker');
- const sizeLabel = document.querySelector('section p');
- const userInputs = document.querySelector('section');
+ const sizeLabel = document.querySelector('.drawingOptions p');
+ const userInputs = document.querySelector('.drawingOptions');
 
 /*For deciding on a colour.*/
 let currentColour = colourPicker.value;
