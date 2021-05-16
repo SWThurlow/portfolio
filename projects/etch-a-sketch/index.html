@@ -7,32 +7,39 @@
         <link rel="stylesheet" href="../../style.css">
         <link rel="stylesheet" href="../projects.css">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Etch-A-Sketch</h1>
+        <h1 class="hTag">Etch-A-Sketch</h1>
         <main>
             <div class="gridContainer"></div>
-            <h2>Change it up!</h2>
-            <form action="#">
-                <h3>Number of grid cells</h3>
+            <h2 class="hTag">Change it up!</h2>
+            <section>
+                <h3 class="hTag">Number of grid cells</h3>
                 <div class="gridSize">
                     <label for="gridSize">Grid Size:</label><p></p><input type="range" min="16" max="64" step="1" name="gridSize" id="gridSize" value="32">
                 </div>
-                <h3>Colour</h3>
+                <h3 class="hTag">Colour</h3>
                 <div class="colourSelect">
-                    <button id="greyScale">Grey Scale</button>
-                    <button id="rainbow">Rainbow</button>
+                    <button id="greyScale"data-click="colour" >Grey Scale</button>
+                    <button id="rainbow" data-click="colour">Rainbow</button>
                     <div class="picker">
                         <label for="colour">Pick your own:</label>
                         <input type="color" name="colour" id="picker">
                     </div>
                 </div>
-                <h3>Eraser</h3>
+                <h3 class="hTag">Eraser</h3>
                 <div class="eraser">
-                    <button id="eraser">Just a bit of it</button>
-                    <button id="clearGrid">The Whole Grid</button>
+                    <button id="eraser" data-click="colour">Just a bit of it</button>
+                    <button class="clearGrid" data-click="clear-grid">The Whole Grid</button>
                 </div>
-            </form>
+                <h3 class="hTag">How to draw</h3>
+                <div class="howToDraw">
+                    <button  class="drawOnClick" data-click="draw-on-click">One cell at a time</button>
+                    <button  class="drawOnMouseover" data-click="draw-on-mouseover">Big brush strokes</button>
+                </div>
+            </section>
         </main>
     </body>
     <script src="script.js"></script>
