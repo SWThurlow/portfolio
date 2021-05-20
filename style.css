@@ -8,6 +8,7 @@ img {
     background-color: #f02ebfc9;
     display: block;
 }
+
 /*h1 to h6 tags and li used in the navigation bar*/
 
 .hTag {
@@ -58,6 +59,12 @@ h3 {
     line-height: 18px;
 }
 
+/*Text links*/
+
+.textLink {
+    font-weight: 500;
+    color: rgb(4, 0, 255);
+}
 
 /*Header*/
 header{
@@ -69,6 +76,10 @@ header{
 main {
     width: var(--contentWidth);
     margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 900px;
 }
 
 
