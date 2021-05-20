@@ -51,6 +51,11 @@ header {
     height: fit-content;
 }
 
+.shortTitle {
+    height: 80px; 
+    line-height: 80px;
+}
+
 .latestGallery div img {
     width: fit-content;
     padding: 10px;
