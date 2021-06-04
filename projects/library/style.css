@@ -108,6 +108,8 @@ h1 {
     margin: 5px auto;
     text-align: center;
     color: #000;
+    height: fit-content;
+    line-height: 22px;
 }
 
 .library div p {
