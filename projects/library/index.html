@@ -3,13 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <title>Library</title>
-        <link rel="stylesheet" href="resetstyle.css">
+        <link rel="stylesheet" href="../../resetstyle.css">
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../projects.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <h1>My Library</h1>
-        </header>
+        <nav class="navBar">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="../index.html">Projects</a></li>
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>My Library</h1>
         <main>
             <section class="additions">
                 <h2>New Additions</h2>
@@ -23,10 +31,18 @@
                 <button id="addBook">Add Book</button>
             </section>
             <section class="library">
-
+            </section>
+            <section class="aboutProject">
+                <h2 class="hTag">About this project</h2>
+                <h3 class="hTag">Where I started</h3>
+                <p class="textContent">This is another project from the Odin projects syllabus. That meant that the main goal with this project was to help develop more of an understanding of object constructors and classes when the code was later refactored.</p>
+                <h3 class="hTag">How it changed</h3>
+                <p class="textContent">The main way this project changed was the moving to the use of classes. However I did also spend some time playing around with various layout and colour schemes, something I should have possible have done after more of a break given how much classes had me scratching my head.</p>
+                <h3 class="hTag">How I improved</h3>
+                <p class="textContent">That I am not a massive fan of classes and much prefer factory function would be the first important thing this project taught me. The second one being that I need to build many more things and try to focus on improving my skills with designing layouts and picking colours before I get good at making things that look good without copying design ideas from other people.</p>
             </section>
         </main>
-        
+        <footer></footer>
     </body>
     <script src="script.js"></script>
 </html>

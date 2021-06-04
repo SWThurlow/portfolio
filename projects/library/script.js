@@ -8,6 +8,8 @@ const newRead = document.getElementById('read');
 const addBook = document.getElementById('addBook');
 const fieldsMessage = document.querySelector('.fieldsMessage');
 const library = document.querySelector('.library');
+/*Set library min height so it doesn't disappear without any books.*/
+library.style.cssText = `min-height: calc(100vh - ${library.offsetTop}px)`;
 
 /*Book constructor.*/
 class Book {
