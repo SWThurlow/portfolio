@@ -7,7 +7,7 @@ header {
 .latestGallery {
     display: flex;
     flex-wrap: nowrap;
-    height: 600px;
+    height: 500px;
     padding: 50px 100px;
     border: 1px solid white;
     overflow-x: scroll;
