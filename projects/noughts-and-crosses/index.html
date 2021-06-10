@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Noughts and Crosses</title>
+        <link rel="stylesheet" href="resetstyle.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Noughts<br>and<br>Crosses</h1>
+
+        <section class="gameContainer">
+          <section class="top">
+            <div class="gameType visible">
+              <button data-type="vsComputer">Vs. Computer</button>
+              <button data-type="twoPlayer">Two Player</button>
+            </div>
+            <div class="playerInput hidden">
+              <label for="player1Input" id="player1label">Player 1:</label><input type="text" name="player1input" id="player1input">
+            </div>
+            <div class="playerInput hidden">
+              <label for="player2Input">Player 2:</label><input type="text" name="player2input" id="player2input">
+            </div>
+            <button class="startGame hidden">Start Game</button>
+          </section>
+          <div class="playerOne hidden">
+            <h2 class="playerOneTitle"></h2>
+            <h2>O</h2>
+            <p class="playerOneWins score"></p>
+          </div>
+          <table>
+              <tr>
+                <td data-index="0"></td>
+                <td data-index="1"></td>
+                <td data-index="2"></td>
+              </tr>
+              <tr>
+                <td data-index="3"></td>
+                <td data-index="4"></td>
+                <td data-index="5"></td>
+              </tr>
+              <tr>
+                <td data-index="6"></td>
+                <td data-index="7"></td>
+                <td data-index="8"></td>
+              </tr>
+          </table>
+          <div class="playerTwo hidden">
+            <h2 class="playerTwoTitle"></h2>
+            <h2>X</h2>
+            <p class="playerTwoWins score"></p>
+          </div>
+          <section class="bottom">
+            <p class="endGameMsg hidden"></p>
+            <button class="playAgain hidden">Play Again?</button>
+          </section>
+        </section>
+
+    </body>
+    <script src="script.js">
+    </script>
+</html>

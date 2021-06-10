@@ -1,0 +1,176 @@
+body {
+    background-color: rgba(129, 139, 148, 0.308);
+}
+
+h1 {
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 88px;
+    font-weight: 800;
+    color: rgb(255, 165, 29);
+    text-shadow: 5px 4px rgb(29, 150, 255);
+    text-align: center;
+}
+
+/*All the parts to do with the game.*/
+.gameContainer {
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "theTop theTop theTop"
+                         "playerOne board playerTwo"
+                         "theBottom theBottom theBottom ";
+    grid-template-rows: 120px 320px 120px;
+    grid-template-columns: 200px 320px 200px;
+    align-items: center;
+}
+
+/*User inputs to select game type and start game.*/
+.top {
+    grid-area: theTop;
+}
+
+button {
+    background-color: rgb(255, 165, 29);
+    color: #1c77ff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 550;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    padding: 6px;
+}
+
+.gameType {
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+}
+
+.playerInput {
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 10px auto;
+}
+
+.playerInput label {
+    font-weight: 600;
+    font-size: 20px;
+    color: #34be27;
+}
+
+.playerInput input {
+    margin-left: 5px;
+}
+
+.playerInput input:focus-visible {
+    outline: none;
+}
+
+.startGame{
+    display: block;
+    margin: 0 auto;
+}
+
+.playAgain {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/*Players and scores.*/
+.playerOne {
+    grid-area: playerOne;
+}
+
+.playerTwo {
+    grid-area: playerTwo;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 52px;
+    font-weight: 525;
+    color: rgb(255, 165, 29);
+    text-shadow: 3px 2px rgb(29, 150, 255);
+    text-align: center;
+}
+
+.score {
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(255, 165, 29);
+    text-shadow: 1px 1px rgb(29, 150, 255);
+    text-align: center;
+}
+
+/*The game board.*/
+table {
+    width: 320px;
+    border-spacing: 5px;
+    border-collapse: separate;
+    grid-area: board;
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(29, 150, 255);
+    color: rgb(255, 165, 29);
+    text-align: center;
+    line-height: 100px;
+    font-size: 100px;
+    font-weight: 700;
+    font-family: sans-serif;
+    box-shadow: 3px 3px rgba(255, 165, 29, 0.37);
+}
+
+/*Win message and play again.*/
+.bottom {
+    grid-area: theBottom;
+}
+
+.endGameMsg {
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(255, 165, 29);
+    text-shadow: 1px 1px rgb(29, 150, 255);
+    text-align: center;
+}
+
+/*For hiding user inputs when not needed.*/
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.hidden {
+    display: none;
+}
+
+.fadeOut {
+    animation: fadeOut 1s;
+    -webkit-animation: fadeOut 1s;
+    -moz-animation: fadeOut 1s;
+    -o-animation: fadeOut 1s;
+    -ms-animation: fadeOut 1s;
+}
+
+.visible {
+    display: block;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
