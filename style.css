@@ -112,7 +112,6 @@ nav ul li {
 
 body {
     display: grid;
-    grid-template-rows: unset unset unset unset;
     grid-template-areas: "header" "about" "projects" "contact";
     overflow-x: hidden;
 }
