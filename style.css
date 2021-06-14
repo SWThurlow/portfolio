@@ -159,7 +159,9 @@ header .titleContainer {
 
 #about p {
     width: calc(var(--contentWidth) - 250px);
+    max-width: 650px;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 
@@ -174,9 +176,9 @@ header .titleContainer {
 #projects div {
     margin-top: 15px;
     display: grid;
-    grid-template-rows: unset unset;
     grid-template-columns: 3fr 1fr 1fr;
     grid-template-areas: "title title ." "description img img" "projectLink img img";
+    max-width: 800px;
 }
 
 #projects div h3{
@@ -185,12 +187,14 @@ header .titleContainer {
 
 #projects div .description {
     width: calc(var(--contentWidth) - 250px);
+    max-width: 650px;
     display: inline-block;
     grid-area: description;
 }
 
 #projects div .projectLink {
     width: calc(var(--contentWidth) - 250px);
+    max-width: 650px;
     display: inline-block;
     grid-area: projectLink;
 }
