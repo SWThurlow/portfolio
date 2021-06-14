@@ -3,11 +3,6 @@
 :root {
     --contentWidth: 80vw
 }
-/*tempoary background on imgs to act as a placeholder*/
-img {
-    background-color: #f02ebfc9;
-    display: block;
-}
 
 /*h1 to h6 tags and li used in the navigation bar*/
 
@@ -181,17 +176,23 @@ header .titleContainer {
     display: grid;
     grid-template-rows: unset unset;
     grid-template-columns: 3fr 1fr 1fr;
-    grid-template-areas: "title title ." "description img img";
+    grid-template-areas: "title title ." "description img img" "projectLink img img";
 }
 
 #projects div h3{
     grid-area: title;
 }
 
-#projects div p {
+#projects div .description {
     width: calc(var(--contentWidth) - 250px);
     display: inline-block;
     grid-area: description;
+}
+
+#projects div .projectLink {
+    width: calc(var(--contentWidth) - 250px);
+    display: inline-block;
+    grid-area: projectLink;
 }
 
 #projects div img {
