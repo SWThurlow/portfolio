@@ -103,7 +103,9 @@ nav ul li {
     padding: calc((8vh - 16px)/2) 15px;
 }
 
-
+.navReach {
+    padding-top: 8vh;
+}
 /*Landing page sections grid*/
 
 body {
@@ -121,7 +123,6 @@ body {
 header {
     height: 92vh;
     width: 100vw;
-    margin-bottom: 50px;
     background-color: #404040;
     grid-area: header;
     z-index: 50;
@@ -168,7 +169,6 @@ header .titleContainer {
 /*Projects section*/
 
 #projects {
-    margin-top: 20px;
     grid-area: projects;
     z-index: 50;
 }
@@ -216,7 +216,7 @@ header .titleContainer {
 #contactForm p {
     margin-bottom: 25px;
 }
-
+/*Not currently needed but may be used in the future.
 #contactForm form {
     display: grid;
     grid-template-rows: unset unset unset unset;
@@ -240,7 +240,7 @@ header .titleContainer {
 #contactForm .submitBtn {
     grid-area: submit;
 }
-
+*/
 
 /*Footer*/
 
