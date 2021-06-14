@@ -191,7 +191,10 @@ h3 {
 }
 
 .textContent {
-    color: rgb(15, 45, 141);
+    padding: 10px;
+    color: #0f0f0f;
+    background-color: #f2f2f2;
+    border-radius: 5px;
     font-size: 18px;
     font-weight: 500px;
 }

@@ -93,6 +93,7 @@ main {
     right: 0;
     width: 100vw;
     height: 8vh;
+    min-height: 20px;
     background-color: #fff;
     z-index: 100;
 }
