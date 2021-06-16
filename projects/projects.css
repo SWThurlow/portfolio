@@ -9,3 +9,13 @@ header {
 .aboutProject p {
     margin-bottom: 15px;
 }
+
+/*About section.*/
+#about {
+    padding-top: 8vh;
+}
+
+#about p {
+    width: 80vw;
+    max-width: 900px;
+}
