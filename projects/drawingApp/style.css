@@ -1,14 +1,9 @@
 /*Drawing app*/
-
-.appTitle {
-    margin-bottom: 15px;
-}
-
 /*Canvas*/
 
 canvas {
     display: block;
-    margin: 0 auto;
+    margin: 30px auto;
     border: 2px black solid;
     background-color: rgba(247, 247, 247, 0.986);
 }
@@ -18,7 +13,7 @@ canvas {
 
 .drawingControls {
     width: 80%;
-    margin: 15px auto;
+    margin: 0 auto;
     display: grid;
     grid-template-rows: 1fr, 1fr, 1fr;
     grid-template-areas: "shape size colour";
@@ -27,6 +22,10 @@ canvas {
 
 
 /*Brush shape settings*/
+
+.appTitle {
+    margin-bottom: 15px;
+}
 
 .brushShapes {
     grid-area: shape;

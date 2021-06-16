@@ -98,7 +98,7 @@ function draw(e) {
 
     /*X and Y   coordinates*/
     let x = e.clientX - parseFloat(canMargX[0]);
-    let y = (e.clientY + window.pageYOffset) - canMargY;
+    let y = (e.clientY + window.pageYOffset);
 
     /*Drawing - done in an if statment so that it is possible to use the eraser without losing the selected colour.*/
     if (rubbingOut) {
