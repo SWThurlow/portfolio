@@ -11,15 +11,6 @@ canvas.addEventListener('mousemove', draw);
 
 let painting = false;
 
-/*To have drawing occur on cursor location relative to canvas not to window - willneed to try and find a more elegant solution when incorporating into a portfolio website rather than finding height, margin and padding values for all elements above the canvas*/
-let canStyle = getComputedStyle(canvas);
-let canMargX = canStyle.getPropertyValue('margin-left').split('px');
-let h1Style = getComputedStyle(document.querySelector('h1'));
-let h1Height = h1Style.getPropertyValue('height').split('px');
-let h1margin = h1Style.getPropertyValue('margin').split('px');
-console.log(h1margin);
-let canMargY = parseFloat(h1Height[0]) + (parseFloat(h1margin[0]) * 2);
-
 /*Variables for brush settings*/
 /*Brush Shape*/
 
@@ -97,8 +88,8 @@ function draw(e) {
 
 
     /*X and Y   coordinates*/
-    let x = e.clientX - parseFloat(canMargX[0]);
-    let y = (e.clientY + window.pageYOffset);
+    let x = e.clientX - canvas.offsetLeft;
+    let y = e.clientY - canvas.offsetTop + window.scrollY;
 
     /*Drawing - done in an if statment so that it is possible to use the eraser without losing the selected colour.*/
     if (rubbingOut) {
