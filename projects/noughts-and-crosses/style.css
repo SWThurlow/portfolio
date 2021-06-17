@@ -19,16 +19,22 @@ h1 {
 
 /*All the parts to do with the game.*/
 .gameContainer {
+    width: -webkit-fit-content;
     width: fit-content;
     width: -moz-fit-content;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
-    grid-template-areas: "theTop theTop theTop"
+        grid-template-areas: "theTop theTop theTop"
                          "playerOne board playerTwo"
                          "theBottom theBottom theBottom ";
+    -ms-grid-rows: 120px 320px 120px;
     grid-template-rows: 120px 320px 120px;
+    -ms-grid-columns: 200px 320px 200px;
     grid-template-columns: 200px 320px 200px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /*User inputs to select game type and start game.*/
@@ -48,12 +54,14 @@ button {
 }
 
 .gameType {
+    width: -webkit-fit-content;
     width: fit-content;
     width: -moz-fit-content;
     margin: 0 auto;
 }
 
 .playerInput {
+    width: -webkit-fit-content;
     width: fit-content;
     width: -moz-fit-content;
     margin: 10px auto;
@@ -130,7 +138,8 @@ td {
     font-size: 100px;
     font-weight: 700;
     font-family: sans-serif;
-    box-shadow: 3px 3px rgba(255, 165, 29, 0.37);
+    -webkit-box-shadow: 3px 3px rgba(255, 165, 29, 0.37);
+            box-shadow: 3px 3px rgba(255, 165, 29, 0.37);
 }
 
 /*Win message and play again.*/
@@ -149,9 +158,18 @@ td {
 }
 
 /*For hiding user inputs when not needed.*/
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
 @keyframes fadeIn {
     0% {opacity: 0;}
     100%{opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100%{opacity: 0;}
 }
 
 @keyframes fadeOut {

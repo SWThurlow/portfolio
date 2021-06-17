@@ -14,9 +14,11 @@ canvas {
 .drawingControls {
     width: 80%;
     margin: 0 auto;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr, 1fr, 1fr;
     grid-template-rows: 1fr, 1fr, 1fr;
-    grid-template-areas: "shape size colour";
+        grid-template-areas: "shape size colour";
     text-align: center;
 }
 
@@ -44,7 +46,9 @@ canvas {
 
 .brushShapes button:hover{
     cursor: pointer;
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 /*Brush size settings*/

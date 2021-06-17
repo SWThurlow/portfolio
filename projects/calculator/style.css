@@ -51,8 +51,11 @@ main {
 }
 
 button p:hover {
-    transform: scale(1.5);
-    animation-duration: 0.5s;
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
 }
 
 .equals {
