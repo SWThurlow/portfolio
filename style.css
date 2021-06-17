@@ -99,8 +99,8 @@ nav ul {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     font-size: 16px;
 }
 
@@ -114,9 +114,8 @@ nav ul li {
 /*Landing page sections grid*/
 
 body {
-    display: -ms-grid;
     display: grid;
-        grid-template-areas: "header" "about" "projects" "contact";
+    grid-template-areas: "header" "about" "projects" "contact";
     overflow-x: hidden;
 }
 
@@ -128,8 +127,6 @@ body {
 /*Header Elements*/
 
 header {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     height: 92vh;
     width: 100vw;
     background-color: #404040;
@@ -146,8 +143,6 @@ header .titleContainer {
 /*About me section*/
 
 #about {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
     grid-area: about;
     z-index: 50;
 }
@@ -181,17 +176,13 @@ header .titleContainer {
 /*Projects section*/
 
 #projects {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
     grid-area: projects;
     z-index: 50;
 }
 
 #projects div {
     margin-top: 15px;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 3fr 1fr 1fr;
     grid-template-columns: 3fr 1fr 1fr;
     grid-template-areas: "title title ." 
     "description img img" 
@@ -200,15 +191,10 @@ header .titleContainer {
 }
 
 #projects div h3{
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
     grid-area: title;
 }
 
 #projects div .description {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
     width: calc(var(--contentWidth) - 250px);
     max-width: 650px;
     display: inline-block;
@@ -216,8 +202,6 @@ header .titleContainer {
 }
 
 #projects div .projectLink {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
     width: calc(var(--contentWidth) - 250px);
     max-width: 650px;
     display: inline-block;
@@ -225,22 +209,16 @@ header .titleContainer {
 }
 
 #projects div img {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
+    grid-area: img;
     display: inline-block;
     height: 200px;
     width: 200px;
     padding: 0 15px;
-    grid-area: img;    
 }
 
 /*Contact form*/
 
 #contactForm {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
     grid-area: contact;
 }
 
