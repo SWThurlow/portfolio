@@ -3,6 +3,9 @@ const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 canvas.height = window.innerHeight * 0.8;
 canvas.width = window.innerWidth * 0.8;
+if(window.innerWidth > 1125) {
+    canvas.width = 900;
+}
 
 /*Mouse control event listeners.*/
 canvas.addEventListener('mousedown', startPosition);
@@ -16,22 +19,21 @@ let painting = false;
 
 let brushShape = 'round'
 let rubbingOut = false;
+const shapeSelection = document.querySelector('.brushShapes');
 
-let round = document.getElementById('round');
-round.addEventListener('click', () => {
-    brushShape = 'round';
-    rubbingOut = false
-});
-let square = document.getElementById('square');
-square.addEventListener('click', () => {
-    brushShape = 'square';
-    rubbingOut = false
-});
-let eraser = document.getElementById('eraser');
-eraser.addEventListener('click', () => {
-    rubbingOut = true
-});
+function changeShape(target) {
+    if(target.id === '') return;
 
+    if(target.id === 'round' || target.id === 'square'){
+        rubbingOut = false;
+    } else {
+        rubbingOut = true;
+    }
+    
+    brushShape = target.id;
+}
+
+shapeSelection.addEventListener('click', (e) => changeShape(e.target));
 
 /*Brush slider value*/
 let brushSize = document.getElementById('brushSize');
@@ -40,33 +42,31 @@ brushSize.addEventListener('input', () => {
 });
 
 /*Colour controls*/
-let red = document.getElementById('red');
-red.addEventListener('input', () => {
-    document.getElementById('redOutput').innerHTML = red.value;
-});
-let green = document.getElementById('green');
-green.addEventListener('input', () => {
-    document.getElementById('greenOutput').innerHTML = green.value;
-});
-let blue = document.getElementById('blue');
-blue.addEventListener('input', () => {
-    document.getElementById('blueOutput').innerHTML = blue.value;
-});
+const colourInputs = document.querySelectorAll('.brushColours input');
+let red = 0;
+let green = 0;
+let blue = 0;
+let colour = `rgb(${red}, ${green}, ${blue})`;
 
-let colour = 'rgb(' + red.value + ', ' + green.value + ', ' + blue.value + ')';
-let currentColour = document.getElementById('currentColour');
+function colourChange(target) {
+    const id = target.id;
+    document.getElementById(`${id}Output`).innerHTML = target.value;
 
-red.addEventListener('input', () => {
-    colour = 'rgb(' + red.value + ', ' + green.value + ', ' + blue.value + ')';
-    currentColour.style.cssText = 'background-color:' + colour + ';';
-});
-green.addEventListener('input', () => {
-    colour = 'rgb(' + red.value + ', ' + green.value + ', ' + blue.value + ')';
-    currentColour.style.cssText = 'background-color:' + colour + ';';
-});
-blue.addEventListener('input', () => {
-    colour = 'rgb(' + red.value + ', ' + green.value + ', ' + blue.value + ')';
-    currentColour.style.cssText = 'background-color:' + colour + ';';
+    if(id === 'red') {
+        red = target.value
+    } else if(id === 'green'){
+        green = target.value
+    } else {
+        blue = target.value
+    }
+    colour = `rgb(${red}, ${green}, ${blue})`;
+    
+    const currentColour = document.getElementById('colourDisplay');
+    currentColour.style.cssText = `background-color: ${colour};`;    
+}
+
+colourInputs.forEach(input => {
+    input.addEventListener('input', (e) => colourChange(e.target));
 });
 
 /*Drawing functions*/
@@ -86,9 +86,8 @@ function finishPosition(e) {
 function draw(e) {
     if (!painting) return;
 
-
     /*X and Y   coordinates*/
-    let x = e.clientX - canvas.offsetLeft;
+    let x = e.pageX - canvas.offsetLeft;
     let y = e.clientY - canvas.offsetTop + window.scrollY;
 
     /*Drawing - done in an if statment so that it is possible to use the eraser without losing the selected colour.*/
