@@ -7,7 +7,6 @@ main {
 }
 
 h1 {
-    margin-top: 8vh;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 88px;
     line-height: 88px;
@@ -37,6 +36,26 @@ h1 {
             align-items: center;
 }
 
+@media (max-width: 425px) {
+    .gameContainer {
+        margin: 0 auto;
+        display: -ms-grid;
+        display: grid;
+        grid-template-areas: "theTop"
+                             "playerOne"
+                             "board"
+                             "playerTwo"
+                             "theBottom";
+        -ms-grid-rows: 120px 130px 320px 130px 120px;
+        grid-template-rows: 120px 130px 320px 130px 120px;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
 /*User inputs to select game type and start game.*/
 .top {
     grid-area: theTop;
@@ -51,6 +70,7 @@ button {
     border: 1px solid rgb(0, 0, 0);
     border-radius: 12px;
     padding: 6px;
+    display: block;
 }
 
 .gameType {
@@ -58,6 +78,12 @@ button {
     width: fit-content;
     width: -moz-fit-content;
     margin: 0 auto;
+}
+
+@media (max-width: 425px) {
+    .gameType {
+
+    }
 }
 
 .playerInput {
@@ -162,6 +188,7 @@ td {
     0% {opacity: 0;}
     100%{opacity: 1;}
 }
+
 @keyframes fadeIn {
     0% {opacity: 0;}
     100%{opacity: 1;}
