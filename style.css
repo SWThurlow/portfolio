@@ -11,7 +11,6 @@
     background-color: #404040;
 }
 
-
 /*For all h1 tags throughout site*/
 
 h1 {
@@ -23,7 +22,6 @@ h1 {
     line-height: 48px;
     color: #ffff66;
 }
-
 
 /*h2 tags used for section titles on landing page*/
 
@@ -46,7 +44,6 @@ h3 {
     border-radius: 3px;
 }
 
-
 /*All text content that doesn't fall under hTag*/
 
 .textContent {
@@ -62,11 +59,6 @@ h3 {
     color: rgb(4, 0, 255);
 }
 
-/*Header*/
-header{
-    margin-top: 8vh;
-}
-
 /*Main content*/
 
 main {
@@ -78,6 +70,11 @@ main {
     max-width: 900px;
 }
 
+@media (max-width: 425px) {
+    main {
+        width: 90vw;
+    }
+}
 
 /*Navigation bar*/
 
@@ -111,6 +108,7 @@ nav ul li {
 .navReach {
     padding-top: 8vh;
 }
+
 /*Landing page sections grid*/
 
 body {
@@ -118,8 +116,6 @@ body {
     grid-template-areas: "header" "about" "projects" "contact";
     overflow-x: hidden;
 }
-
-
 
 /*Header*/
 
@@ -172,6 +168,17 @@ header .titleContainer {
     margin-bottom: 20px;
 }
 
+@media (max-width: 425px) {
+    #about figure {
+        width: 200px;
+        float: none;
+        margin: 0 auto;
+    }
+
+    #about p {
+        width: 100%;
+    }
+}
 
 /*Projects section*/
 
@@ -216,6 +223,29 @@ header .titleContainer {
     padding: 0 15px;
 }
 
+@media (max-width: 425px) {
+    #projects div {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" 
+        "description" 
+        "projectLink"
+        "img";
+    }
+
+    #projects div .description {
+        width: 100%;
+    }
+    
+    #projects div .projectLink {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    #projects div img {
+        margin: 0 auto;
+    }
+}
+
 /*Contact form*/
 
 #contactForm {
@@ -225,31 +255,6 @@ header .titleContainer {
 #contactForm p {
     margin-bottom: 25px;
 }
-/*Not currently needed but may be used in the future.
-#contactForm form {
-    display: grid;
-    grid-template-rows: unset unset unset unset;
-    grid-template-areas: "email" "subject" "message" "submit";
-    width: 50%;
-    margin: 0 auto;
-}
-
-#contactForm .emailField {
-    grid-area: email;
-}
-
-#contactForm .subjectField {
-    grid-area: subject;
-}
-
-#contactForm .messageField {
-    grid-area: message;
-}
-
-#contactForm .submitBtn {
-    grid-area: submit;
-}
-*/
 
 /*Footer*/
 
