@@ -5,6 +5,18 @@
  const sizeLabel = document.querySelector('.drawingOptions p');
  const userInputs = document.querySelector('.drawingOptions');
 
+/*Limiting grid size to prevent cells getting too small on mobile devices*/
+if(window.innerWidth <= 425) {
+    gridSize.setAttribute('max', '20')
+    const brushType = document.querySelector('.howToDraw');
+    let brushChildren = [...brushType.childNodes];
+    brushChildren.forEach(child => brushType.removeChild(child));
+    const pMsg = document.createElement('p');
+    pMsg.innerText = 'Unfortunately it is only possibly to draw one cell at a time on mobile devices at this time.'
+    pMsg.setAttribute('class', 'textContent');
+    brushType.appendChild(pMsg);
+}
+
 /*For deciding on a colour.*/
 let currentColour = colourPicker.value;
 

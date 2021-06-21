@@ -1,3 +1,8 @@
+* {
+    overflow-x: hidden;
+}    
+
+/*Drawing grid.*/
 .gridContainer {
     display: -ms-grid;
     display: grid;
@@ -11,10 +16,24 @@
     border: 1px solid black;
 }
 
+@media (max-width: 425px) {
+    .gridContainer {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/*Brush options.*/
 .drawingOptionsHeader {
     width: 500px;
     margin: 15px auto 0 auto;
     text-align: center;
+}
+
+@media (max-width: 425px) {
+    .drawingOptionsHeader {
+        width: 80vw;
+    }
 }
 
 .drawingOptions {
@@ -41,7 +60,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-
+    overflow-x: visible;
 }
 
 .colourSelect { 
@@ -137,4 +156,10 @@
     border-radius: 3px;
     background-color: rgba(20, 14, 14, 0.671);
     color: rgb(250, 231, 123);
+}
+
+@media (max-width: 425px) {
+    input[name="gridSize"] {
+        width: 100px;
+    }
 }
