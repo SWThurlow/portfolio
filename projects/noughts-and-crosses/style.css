@@ -16,6 +16,19 @@ h1 {
     text-align: center;
 }
 
+@media (max-width: 425px) {
+    main {
+        width: 100vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 44px;
+        line-height: 46px;
+    }
+}
+
 /*All the parts to do with the game.*/
 .gameContainer {
     width: -webkit-fit-content;
@@ -46,8 +59,8 @@ h1 {
                              "board"
                              "playerTwo"
                              "theBottom";
-        -ms-grid-rows: 120px 130px 320px 130px 120px;
-        grid-template-rows: 120px 130px 320px 130px 120px;
+        -ms-grid-rows: 120px 0px 260px 0px 0px;
+        grid-template-rows: 120px 0px 260px 0px 0px;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         -webkit-box-align: center;
@@ -80,10 +93,8 @@ button {
     margin: 0 auto;
 }
 
-@media (max-width: 425px) {
-    .gameType {
-
-    }
+.gameType button {
+    margin: 5px auto;
 }
 
 .playerInput {
@@ -100,6 +111,7 @@ button {
 }
 
 .playerInput input {
+    max-width: 135px;
     margin-left: 5px;
 }
 
@@ -146,6 +158,18 @@ h2 {
     text-align: center;
 }
 
+@media (max-width: 425px) {
+    h2 {
+        font-size: 38px;
+        padding: 0;
+        margin: 5px auto;
+    }
+
+    .score {
+        margin: 5px auto;
+    }
+}
+
 /*The game board.*/
 table {
     width: 320px;
@@ -166,6 +190,19 @@ td {
     font-family: sans-serif;
     -webkit-box-shadow: 3px 3px rgba(255, 165, 29, 0.37);
             box-shadow: 3px 3px rgba(255, 165, 29, 0.37);
+}
+
+@media (max-width: 425px) {
+    table {
+        width: 260px;
+    }
+
+    td {
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        font-size: 80px;
+    }
 }
 
 /*Win message and play again.*/
@@ -226,6 +263,11 @@ td {
 }
 
 /*Write up about project.*/
+.aboutProject {
+    margin: 0 auto;
+    width: 90vw;
+
+}
 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
@@ -236,6 +278,7 @@ h3 {
 }
 
 .textContent {
+    width: 100%;
     padding: 10px;
     color: #0f0f0f;
     background-color: #f2f2f2;

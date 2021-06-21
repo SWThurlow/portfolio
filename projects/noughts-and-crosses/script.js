@@ -35,6 +35,7 @@ const players = (() => {
     const player1Input = document.getElementById('player1input');
     const player2Input = document.getElementById('player2input');
     const startGame =  document.querySelector('.startGame');
+    const gameContainer = document.querySelector('.gameContainer');
 
     //Choosing between playing against the computer or two player.
     let gameType = ''
@@ -95,10 +96,14 @@ const players = (() => {
             toggleVisibility.hide(textInputs[0]);
             toggleVisibility.hide(startGame);
         }
+        setTimeout(() => {
+            gameContainer.style.cssText = `-ms-grid-rows: 0px 80px 260px 120px 120px;
+        grid-template-rows: 0px 120px 260px 120px 80px;`
         winCounters.player1.textContent = 'Wins: 0';
         winCounters.player2.textContent = 'Wins: 0';
         toggleVisibility.reveal(player1Container);
         toggleVisibility.reveal(player2Container);
+        }, 1000);
     });
     return {player1, player2}
 })();
