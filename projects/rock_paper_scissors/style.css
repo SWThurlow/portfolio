@@ -34,3 +34,18 @@ button:hover {
     margin: 10px auto;
     color: #0c0a0a;
 }
+
+@media (max-width: 425px) {
+    main {
+        margin-top: 80px;
+    }
+
+    .gameArea {
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    .gameArea h3 {
+        height: fit-content;
+    }
+}
