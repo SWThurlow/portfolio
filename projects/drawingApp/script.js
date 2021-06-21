@@ -11,6 +11,19 @@ if(window.innerWidth > 1125) {
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', finishPosition);
 canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('touchstart', (e) => {
+        startPosition(e.targetTouches[0])
+    }
+)
+canvas.addEventListener('touchend', (e) => {
+        finishPosition(e.targetTouches[0])
+    }
+);
+canvas.addEventListener('touchmove', (e) =>
+    {
+        draw(e.targetTouches[0]);
+    }
+);
 
 let painting = false;
 

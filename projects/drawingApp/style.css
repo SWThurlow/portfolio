@@ -6,6 +6,7 @@ canvas {
     margin: 30px auto;
     border: 2px black solid;
     background-color: rgba(247, 247, 247, 0.986);
+    touch-action: none;
 }
 
 
@@ -22,6 +23,13 @@ canvas {
     text-align: center;
 }
 
+@media (max-width: 425px) {
+    .drawingControls {
+        grid-template-areas: "shape"
+        "size"
+        "colour";
+    }
+}
 
 /*Brush shape settings*/
 
