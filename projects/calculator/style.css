@@ -18,6 +18,14 @@ main {
     background-color: transparent;
 }
 
+@media (max-width: 425px) {
+    main {
+        width: fit-content;
+        width: -moz-fit-content;
+        width: -webkit-fit-content;
+    }
+}
+
 .calculator {
     width: 300px;
     margin: 50px auto 0 auto;
