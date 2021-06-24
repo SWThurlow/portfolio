@@ -50,7 +50,7 @@ function toThePowerOf(a, b) {
 /*Calculating the answer.*/
 function calculate(equals) {
     if(num2 === '.'|| num2 === '' || num1 === '.') return;
-    
+
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
     
@@ -79,15 +79,17 @@ function calculate(equals) {
     } else {
         decimal = false;
     }
-
-    if(equals === true && num2 !== '0'){
+    
+    if(equals === true && num2 !== 0){
+        console.log('hi')
         num1 = `${answer}`;
+        console.log(num1)
         answer = '';
         num2 = '';
         operator = '';
         displayText = num1;
     }
-    
+
     displayAnswer();
 }
 
@@ -143,7 +145,7 @@ function click(target) {
             operatorInput('^')
             break;
         case '=':
-            calculate();
+            calculate(true);
             break;
         case 'ac':
             clear();
@@ -238,11 +240,16 @@ function backspace() {
     } else if(operator !== '' && num2 === ''){
         operator = '';
         displayText = num1;
+        displayAnswer()
     } else if (operator !== '' && num2 !== ''){
-        split = num2.split('');
-        split.splice(split.length -1, 1);
-        num2 = split.join('');
-        ddisplayText = num1 + operator + num2;
+        if(num2.length === 1) {
+            num2 = '';
+        } else {
+            split = num2.split('');
+            split.splice(split.length -1, 1);
+            num2 = split.join('');
+        }
+        displayText = num1 + operator + num2;
         displayAnswer();
     }
     error.textContent = '';
