@@ -139,12 +139,23 @@ header .titleContainer {
 #about {
     grid-area: about;
     z-index: 50;
+    display: grid;
+    grid-template-areas: "aboutTitle aboutTitle"
+                         "aboutText1 figure"
+                         "aboutText2 figure";
+
+}
+
+#about h2 {
+    grid-area: aboutTitle;
+    display: block;
+    margin: 30px 0;
 }
 
 #about figure {
     width: 200px;
     padding: 0 15px;
-    float: right;
+    grid-area: figure;
 }
 
 #about figure img {
@@ -166,10 +177,24 @@ header .titleContainer {
     margin-bottom: 20px;
 }
 
+.aboutText1 {
+    grid-area: aboutText1;
+}
+
+.aboutText2 {
+    grid-area: aboutText2;
+}
+
 @media (max-width: 425px) {
+    #about {
+        grid-template-areas: "aboutTitle"
+                             "figure"
+                             "aboutText1"
+                             "aboutText2";
+
+    }
+
     #about figure {
-        width: 200px;
-        float: none;
         margin: 0 auto;
     }
 
