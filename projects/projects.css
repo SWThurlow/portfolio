@@ -12,6 +12,7 @@ header {
 
 /*About section.*/
 #about {
+    display: block;
     padding-top: 8vh;
 }
 
