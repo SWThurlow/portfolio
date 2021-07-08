@@ -104,3 +104,29 @@ header {
     padding: 0;
     margin-bottom: 5px;
 }
+
+/*Websites*/
+
+.websites{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.websites div {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.websites div h3 {
+    width: 100%;
+}
+
+.websites div img {
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.websites div p {
+    margin-bottom: 10px;
+}
